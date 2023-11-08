@@ -95,6 +95,8 @@ body {
   	grid-column-end: 3;
   	grid-row-start: 1;
   	grid-row-end: 3;
+
+  	min-height: 30em;
 }
 
 .mainimg.index {
@@ -200,12 +202,9 @@ body {
 
 .main.index .contents .text1 {
 	z-index: 10;
-	position: absolute;
+	position: relative;
 
 	height: 100%;
-	width: calc(100% - 4em);
-
-	padding: 0 2em 0 2em;
 }
 
 .main.index .contents .img1 img {
@@ -455,7 +454,7 @@ a.nav-link-full {
 	bottom: 0;
 
 	transition: all 0s;
-	transition-delay: 0.06s;
+	transition-delay: 0.1s;
 }
 
 .nav-link-button {
@@ -488,7 +487,7 @@ a.nav-link-full {
 }
 
 @media (hover: none) {
-	a.nav-link-full {
+	.grid-box.nav .contents a.nav-link-full {
 		display: none;
 	}
 }
@@ -562,14 +561,14 @@ a.nav-link-full {
   		grid-column-end: 5;
   		grid-row-start: 1;
   		grid-row-end: 4;
-  		min-height: 40vh;
+  		/*min-height: 40vh;*/
 	}
 	.mainimg.index {
 		grid-column-start: 5;
   		grid-column-end: 7;
   		grid-row-start: 1;
   		grid-row-end: 4;
-  		min-height: 40vh;
+  		/*min-height: 40vh;*/
 	}
 
 	/*.banner {
@@ -587,7 +586,7 @@ a.nav-link-full {
 	}
 	/*define the grid*/
 	.grid-container {
-		grid-template-rows: var(--grid-main-height-1c) var(--grid-row-height-1c) var(--grid-row-height-1c) var(--grid-row-height-1c) var(--grid-row-height-1c) var(--grid-row-height-1c) var(--grid-row-height-1c);
+		grid-template-rows: auto var(--grid-row-height-1c) var(--grid-row-height-1c) var(--grid-row-height-1c) var(--grid-row-height-1c) var(--grid-row-height-1c);
 	}
 
 	.grid-box{
@@ -598,8 +597,8 @@ a.nav-link-full {
 		grid-column-start: 1;
   		grid-column-end: 2;
   		grid-row-start: 1;
-  		grid-row-end: 4;
-  		min-height: 40vh;
+  		grid-row-end: 3;
+  		/*min-height: 40vh;*/
 	}
 
 	h1 {
