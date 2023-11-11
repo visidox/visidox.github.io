@@ -1,0 +1,203 @@
+.top-text h2 {
+	font-size: min(16.6vw, var(--top-text-size));
+	font-family: "geologica";
+}
+
+.top-text h1 {
+	font-size: min(16.6vw, var(--top-text-size));
+	font-family: "montserrat subrayada";
+
+	padding: 0;
+	margin: calc(-0.058 * var(--top-text-size)) 0 calc(-0.01 * var(--top-text-size)) calc(2 * var(--distance-from-edge-DT));
+
+	position: relative;
+  	display: inline;
+
+  	color: var(--edge-color);
+}
+
+.top-text a {
+	text-decoration: none;
+}
+
+/*keep space from top and bottom*/
+.top-spacer {
+	height: var(--distance-from-edge-DT);
+	display: none;
+}
+.bottom-spacer {
+	height: var(--distance-from-edge-DT);
+}
+
+
+
+/*navigation*/
+.nav-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 4em;
+
+	margin: 0  var(--distance-from-edge-DT) var(--distance-from-edge-DT) var(--distance-from-edge-DT);
+	padding-right: calc(var(--border-width-DT) *1); /*luege das d'outline vo de ching ned öbersteit*/
+  	padding-bottom: calc(var(--border-width-DT) *1); /*luege das d'outline vo de ching ned öbersteit*/
+
+	border-style: solid;
+	border-color: var(--edge-color);
+	border-width: calc(var(--border-width-DT) / 2 * 0);
+
+	background: var(--edge-color);
+
+	max-width: 88em;
+}
+
+.nav-box {
+	position: relative;
+
+	color: var(--bg);
+	border-color: var(--bg);
+
+	font-family: "geologica";
+}
+
+.nav-box.nav1 .contents {
+	background: var(--index-nav1-col2);
+	color: var(--index-nav1-col1);
+}
+.nav-box.nav2 .contents {
+	background: var(--index-nav2-col2);
+	color: var(--index-nav2-col1);
+}
+.nav-box.nav3 .contents {
+	background: var(--index-nav3-col2);
+	color: var(--index-nav3-col1);
+}
+.nav-box.nav4 .contents {
+	background: var(--index-nav4-col2);
+	color: var(--index-nav4-col1);
+}
+
+.nav-spacer {
+	
+}
+
+.nav-box .shadow, .nav-box .contents {
+	position: absolute;
+
+	box-sizing: border-box;
+	height: calc(100% - var(--border-width-DT) *1);/*der rand wägrächnä*/
+	width: calc(100% - var(--border-width-DT) *1);/*der rand wägrächnä*/
+	
+	margin: var(--border-width-DT);
+
+	outline-style: solid; /*outline esch usse ume statt teil dervo*/
+	outline-color: var(--edge-color);
+	outline-width: calc(var(--border-width-DT) / 1);
+	border-radius: var(--inside-radius);
+
+	background: var(--bg);
+	color: var(--edge-color);
+
+	transition: ease all .5s;
+}
+
+.nav-box .shadow {
+	z-index: 0;
+
+	background-image: radial-gradient(black 1px, transparent 0);
+  	background-size: 4px 4px;
+  	background-position: -19px -19px;
+}
+
+.nav-box .contents {
+	z-index: 10;
+
+	transition: all .1s ease-out;
+
+	overflow: hidden;
+}
+
+
+.nav-box .contents .titletile, .nav-box .contents .banner, .nav-box .contents .div h1 {
+	z-index: 10;
+
+	padding: 0  calc(var(--padding-base) / 2) calc(var(--padding-base) / 2) calc(var(--padding-base) / 1.5);
+
+	font-size: 2.4em;
+  	transform: translateY(-1.15em);
+}
+
+.nav-box .contents:hover, .nav-box .shadow:hover + .contents {
+	z-index: 20;
+	transform: translate(var(--index-nav-hover-translate-DT), var(--index-nav-hover-translate-DT));
+}
+
+.nav-box .contents:hover .infotile, .nav-box .shadow:hover + .contents .infotile {
+	
+}
+
+.nav-box .contents:hover .titletile, .nav-box .shadow:hover + .contents .titletile {
+	
+}
+
+.nav-box .contents:hover a.nav-link-full, .nav-box .shadow:hover + .contents a.nav-link-full {
+	z-index: 100;
+	display: inline-block;
+	transform: translateY(0%);
+}
+
+/*only pop out if link has href*/
+
+
+
+
+
+a.nav-box-link {
+	height: 111%;
+	width: 111%;
+
+	position: absolute;
+
+	top: -10px;
+	left: 0;
+}
+
+a.nav-box-link[href=""], a.nav-box-link[href="#"], a.nav-box-link:not([href]),  a.nav-box-link.greyed {
+	background: var(--greyed-color);
+	opacity: 66%;
+}
+
+
+@media screen and (max-width: 1260px) {
+	.nav-container {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 4em 4em;
+	}
+	
+}
+
+@media screen and (max-width: 686px) {
+	.nav-container {
+		grid-template-columns: 1fr;
+		grid-template-rows: 4em 4em 4em 4em;
+	}
+	.nav-box .contents:hover, .nav-box .shadow:hover + .contents {
+		transform: translate(var(--index-nav-hover-translate-1c), var(--index-nav-hover-translate-1c));
+	}
+}
+
+/*remove margin*/
+@media screen and (max-width: 600px) {
+	body {
+		/*background: brown;*/
+	}
+	/*define the grid*/
+	.nav-container {
+		margin: 0  var(--distance-from-edge-1c) var(--distance-from-edge-1c) var(--distance-from-edge-1c);
+	}
+
+	.nav-box .contents:hover, .nav-box .shadow:hover + .contents {
+		z-index: 20;
+		transform: translate(0, 0);
+	}
+		
+}

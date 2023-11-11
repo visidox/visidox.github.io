@@ -1,0 +1,50 @@
+:root {
+	--edge-color: #272626;
+	--bg: #EAE6E5;
+
+	--index-nav-hover-translate-DT: -0.6em;
+	--index-nav-hover-translate-1c: -0.4em;
+
+	--distance-from-edge-DT: max(2vw, 28px);
+	--distance-from-edge-1c: max(2vw, calc(-1.7 * var(--index-nav-hover-translate-DT)));
+	--grid-row-height-index-DT: max(17vh, 11em);
+	--grid-row-height-index-3c: max(17vh, 11em);
+	--grid-row-height-index-2c: max(17vh, 11em);
+	--grid-row-height-index-1c: max(15vh, 11em);
+	--grid-main-height-index-1c: max(24vh, 4em);
+
+	--main-index-img-fil: invert(14%) sepia(4%) saturate(16%) hue-rotate(8deg) brightness(93%) contrast(94%);
+	--main-index-img-bg: #DDE6C7;
+
+	--main-bg: #F9E0C8;
+
+	--index-nav1-col1: #38302E;
+	--index-nav1-col2: #D8FDF5;
+	--index-nav1-fil1: invert(98%) sepia(26%) saturate(433%) hue-rotate(83deg) brightness(101%) contrast(98%);
+	--index-nav2-col1: #4D0A05;
+	--index-nav2-col2: #FAFCB1;
+	--index-nav2-fil1: invert(92%) sepia(12%) saturate(944%) hue-rotate(17deg) brightness(110%) contrast(98%);
+	--index-nav3-col1: #113537;
+	--index-nav3-col2: #FBADAF;
+	--index-nav3-fil1: invert(94%) sepia(79%) saturate(6215%) hue-rotate(289deg) brightness(99%) contrast(99%);
+	--index-nav4-col1: #322A26;
+	--index-nav4-col2: #D9DCF1;
+	--index-nav4-fil1: invert(93%) sepia(5%) saturate(1764%) hue-rotate(191deg) brightness(98%) contrast(94%);
+
+	--content-margin: 0.5vw;
+	--border-width-DT: 3px;
+	--inside-radius: 1em;
+
+	--padding-base: min(var(--inside-radius), 7mm);
+
+	--top-text-size: 6em;
+
+
+	/*team*/
+	--profile-pic-size-DT: 400px;
+	--profile-pic-size-1c: 80vw;
+	--column-gap-team-DT: 4em;
+
+	/*nav*/
+	--greyed-color: var(--edge-color);
+}
